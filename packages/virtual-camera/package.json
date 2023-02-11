@@ -1,0 +1,14 @@
+{
+  "name": "@clownery/virtual-camera",
+  "private": true,
+  "type": "module",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.js",
+  "scripts": {
+    "build:types": "tsc",
+    "build:js": "esbuild ./src/index.js --outdir=./dist --format=esm --target=esnext",
+    "build": "run-p build:*",
+    "prebuild": "rimraf ./dist"
+  },
+  "devDependencies": {}
+}
